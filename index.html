@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Code Editors</title>
+    <link rel="shortcut icon" href="coding favicons.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <video autoplay muted loop id="video-bg">
+        <source src="video-bg.mp4" type="video/mp4">
+    </video>
+    <div class="buttons">
+        <button id="run-btn" onclick="run()">Run</button>
+        <button id="stop-btn" onclick="stop()" style="display: none;">Stop</button>
+    </div>
+    <section class="container">
+        <img src="logo.png" alt="Logo" class="logo">
+        <div class="editor split">
+            <div class="tabs">
+                <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'HTML')">HTML</button>
+                <button class="tablinks" onclick="openTab(event, 'CSS')">CSS</button>
+                <button class="tablinks" onclick="openTab(event, 'JavaScript')">JavaScript</button>
+            </div>
+
+            <div id="HTML" class="tabcontent">
+                <textarea spellcheck="false" id="html-code" placeholder="Type HTML code here">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    
+</body>
+</html>
+                </textarea>
+            </div>
+
+            <div id="CSS" class="tabcontent">
+                <textarea spellcheck="false" id="css-code" placeholder="Type CSS code here"></textarea>
+            </div>
+
+            <div id="JavaScript" class="tabcontent">
+                <textarea spellcheck="false" id="js-code" placeholder="Type JavaScript code here"></textarea>
+            </div>
+        </div>
+
+        <div id="output-container" style="display: none;">
+            <iframe id="output"></iframe>
+        </div>
+    </section>
+
+    <div class="footer">
+        &copy; 2024 EtherForge. Tous droits réservés. | <i class='bx bxl-github bx-tada' style='color:#43c975'></i> <a href="https://github.com/ambresh20" class="namelink" target="_blank">NEXUS</a>
+    </div>
+</body>
+</html>
